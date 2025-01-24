@@ -7,7 +7,7 @@ import ReservationForm from "@/components/ReservationForm"
 import ReservationList from "@/components/ReservationList"
 import { toast } from "sonner"
 
-const REFRESH_INTERVAL = 5 * 60 * 1000; // 5分鐘
+const REFRESH_INTERVAL = 1 * 60 * 1000; // 1分鐘
 
 export default function Home() {
   const { isAdminAuthenticated, adminLogout, currentUser } = useAuth()
