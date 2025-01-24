@@ -18,23 +18,21 @@ export default function Page() {
     })
 
     const handleSubmit = async (e) => {
-        e.preventDefault() // 阻止默認表單提交行為（防止頁面刷新）
+        e.preventDefault()
         setIsLoading(true)
 
         try {   
-            const { token } = await api.auth.login(formData)
-            adminLogin(token)
-            toast.success('登入成功')
+            // 直接使用 adminLogin，它會處理所有登入邏輯
+            await adminLogin(formData)
             router.push('/')
         } catch (error) {
-            console.error(error)
-            toast.error('登入失敗')
+            console.error('Login error:', error)
+            // 錯誤訊息已經由 AuthContext 處理
         } finally {
             setIsLoading(false)
         }
     }
 
-    // onSubmit={handleSubmit} 事件處理函數，當用戶提交表單時，會執行 handleSubmit 函數
     return (
         <div className="flex items-center justify-center">
             <div className="p-6">
