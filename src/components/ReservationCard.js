@@ -9,8 +9,7 @@ const formatDate = (dateString) => {
     const day = String(date.getDate()).padStart(2, '0')
     const time = date.toTimeString().split(' ')[0]
     return `${month}-${day} ${time}`
-  }
-  
+}
 
 export default function ReservationCard({ reservation, index, onQualified, onUnqualified, isAdminAuthenticated }) {
     return (

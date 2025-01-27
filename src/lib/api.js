@@ -188,6 +188,81 @@ export const api = {
         throw error;
       }
     },
+    unchecked: async () => {
+      try {
+        const url = `${API_URL}/reserve/unchecked`;
+        console.log('Get pending reservations request:', {
+          url,
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+        
+        const response = await fetchWithTimeout(url, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          credentials: 'include'
+        });
+
+        return await handleApiResponse(response);
+      } catch (error) {
+        console.error('Get pending reservations error:', error);
+        throw error;
+      }
+    },
+    pass: async () => {
+      try {
+        const url = `${API_URL}/reserve/pass`;
+        console.log('Get pending reservations request:', {
+          url,
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+        
+        const response = await fetchWithTimeout(url, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          credentials: 'include'
+        });
+
+        return await handleApiResponse(response);
+      } catch (error) {
+        console.error('Get pending reservations error:', error);
+        throw error;
+      }
+    },
+    failed: async () => {
+      try {
+        const url = `${API_URL}/reserve/failed`;
+        console.log('Get failed reservations request:', {
+          url,
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+        
+        const response = await fetchWithTimeout(url, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          credentials: 'include'
+        });
+
+        return await handleApiResponse(response);
+      } catch (error) {
+        console.error('Get pending reservations error:', error);
+        throw error;
+      }
+    },
     qualified: async (info) => {
       try {
         console.log('Mark qualified request:', {

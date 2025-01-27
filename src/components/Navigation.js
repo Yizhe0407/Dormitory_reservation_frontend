@@ -14,7 +14,7 @@ export default function Navigation() {
 
     return (
         <div className="flex justify-between gap-4 items-center my-2 mx-6">
-            <h1 className="text-xl font-bold">退宿預約系統</h1>
+            <h1 className="text-xl font-bold">預約檢查系統</h1>
             <Button asChild>
                 {isAdminAuthenticated ? (
                     <Link href="/" onClick={handleLogout}>登出</Link>
