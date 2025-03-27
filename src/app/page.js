@@ -168,7 +168,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col items-center space-y-4 h-full items-center">
+    <div className="flex flex-col items-center space-y-4 h-full">
       <Dialog>
         <DialogTrigger className="w-[280px] bg-black text-white font-bold p-2 mt-2 rounded-xl">預約</DialogTrigger>
         <DialogContent className="w-[250px] rounded-2xl">
